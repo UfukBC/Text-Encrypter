@@ -9,13 +9,13 @@ namespace FileEncrypter
     {
         static void Main(string[] args)
         {
-            Console.Write("Select 1 for encrypt, Select 2 for decrypt ");
+            Console.Write("Select 1 for encrypt, Select 2 for decrypt: ");
             string choice = Console.ReadLine();
 
-            Console.Write("Enter the file path ");
+            Console.Write("Enter the file path: ");
             string inputFile = Console.ReadLine();
 
-            Console.Write("Çıkış dosyasını kaydetmek için yol girin: ");
+            Console.Write("Enter the output file path: ");
             string outputFile = Console.ReadLine();
 
             Console.Write("Enter the password ");
@@ -28,7 +28,7 @@ namespace FileEncrypter
                 else if (choice == "2")
                     Class1.DecryptFile(inputFile, outputFile, password);
                 else
-                    Console.WriteLine("Geçersiz seçim!");
+                    Console.WriteLine("Invalid choice!");
             }
             catch (Exception ex)
             {
